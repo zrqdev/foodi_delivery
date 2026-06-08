@@ -1,0 +1,14 @@
+import 'package:flutter/material.dart';
+import 'package:foodi_delivery/features/auth/presentation/widgets/login_screen_body.dart';
+
+class LoginScreen extends StatelessWidget {
+  const LoginScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      resizeToAvoidBottomInset: false,
+      body: LoginScreenBody(),
+    );
+  }
+}
