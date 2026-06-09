@@ -6,9 +6,6 @@ class LoginScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      resizeToAvoidBottomInset: false,
-      body: LoginScreenBody(),
-    );
+    return Scaffold(body: LoginScreenBody());
   }
 }

@@ -12,74 +12,98 @@ import 'package:go_router/go_router.dart';
 import 'custom_button.dart';
 
 class LoginScreenBody extends StatelessWidget {
-  const LoginScreenBody({super.key});
+  LoginScreenBody({super.key});
+  final GlobalKey<FormState> _formKey =
+      GlobalKey<FormState>();
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(50),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-
-        children: [
-          // Title
-          Text(
-            AppStrings.loginTitle,
-            style: AppTextStyle.style700size36(context),
-          ),
-          Gap(30),
-          // Email Field
-          CustomTextFormField(
-            lable: AppStrings.emailLable,
-            messageField: AppStrings.messageEmailField,
-            isPassword: false,
-          ),
-          Gap(30),
-          // Password Field
-          CustomTextFormField(
-            lable: AppStrings.passwordLable,
-            messageField: AppStrings.passwordLable,
-            isPassword: true,
-          ),
-          Gap(30),
-          // Forget Password
-          CustomTextButton(
-            text: AppStrings.forgetPassword,
-            onTap: () {},
-          ),
-          Gap(30),
-          // Login Button
-          CustomButton(
-            name: AppStrings.login,
-            onPressed: () {},
-          ),
-
-          Gap(30),
-          // Don't have an account and Navigate to Sign up
-          Row(
+      padding: const EdgeInsets.only(
+        right: 50.0,
+        left: 50.0,
+      ),
+      child: Form(
+        key: _formKey,
+        child: SingleChildScrollView(
+          child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text(
-                AppStrings.message,
-                style: AppTextStyle.style400size14(context)
-                    .copyWith(
-                      fontWeight: FontWeight.w500,
-                      color: AppColors.blackColor,
-                    ),
-              ),
 
+            children: [
+              Gap(50),
+              // Title
+              Text(
+                AppStrings.loginTitle,
+                style: AppTextStyle.style700size36(context),
+              ),
+              Gap(30),
+              // Email Field
+              CustomTextFormField(
+                lable: AppStrings.emailLable,
+                messageField: AppStrings.messageEmailField,
+                isPassword: false,
+                messageValidation:
+                    AppStrings.emailMessageError,
+                isEmail: true,
+              ),
+              Gap(30),
+              // Password Field
+              CustomTextFormField(
+                lable: AppStrings.passwordLable,
+                messageField: AppStrings.passwordLable,
+                isPassword: true,
+                messageValidation:
+                    AppStrings.passwordMessageError,
+              ),
+              Gap(30),
+              // Forget Password
               CustomTextButton(
-                text: AppStrings.signUp,
-                onTap: () {
-                  context.push(AppRouter.kSignUp);
+                text: AppStrings.forgetPassword,
+                onTap: () {},
+              ),
+              Gap(30),
+              // Login Button
+              CustomButton(
+                name: AppStrings.login,
+                onPressed: () {
+                  if (_formKey.currentState!.validate()) {
+                    print('valid data');
+                  } else {
+                    print('valid djkdnwnkj  data');
+                  }
                 },
               ),
+
+              Gap(30),
+              // Don't have an account and Navigate to Sign up
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    AppStrings.message,
+                    style:
+                        AppTextStyle.style400size14(
+                          context,
+                        ).copyWith(
+                          fontWeight: FontWeight.w500,
+                          color: AppColors.blackColor,
+                        ),
+                  ),
+
+                  CustomTextButton(
+                    text: AppStrings.signUpTitle,
+                    onTap: () {
+                      context.push(AppRouter.kSignUp);
+                    },
+                  ),
+                ],
+              ),
+              Gap(45),
+
+              SignInWith(),
             ],
           ),
-          Gap(45),
-
-          SignInWith(),
-        ],
+        ),
       ),
     );
   }

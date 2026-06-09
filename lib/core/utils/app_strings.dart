@@ -16,6 +16,24 @@ class AppStrings {
   static final String login = 'Login';
   static final String message = 'Don\'t have an account? ';
   static final String signInWith = 'Sign in with';
+
   // Sign Up Screen
-  static final String signUp = 'Sign Up';
+  static final String signUpTitle = 'Sign Up';
+  static final String confirmePassword =
+      'Confirme Password';
+
+  // Profile Screen
+  static final String fullName = 'Full Name';
+
+  // Message validation Errors
+  static final String emailMessageError =
+      'Plase enter $emailLable';
+  static final String passwordMessageError =
+      'Plase enter $passwordLable';
+  static final String fullNameMessageError =
+      'Plase enter $fullName';
+  static final String confirmePasswordMessageError =
+      'Plase enter $confirmePassword';
+  static final String emailValidMessageError =
+      'Plase enter valid $emailLable';
 }
