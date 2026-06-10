@@ -25,6 +25,10 @@ class AppStrings {
   // Profile Screen
   static final String fullName = 'Full Name';
 
+  // Home Screen
+  static final String title = 'Delicious\nfood for you';
+  static final String search = 'search';
+
   // Message validation Errors
   static final String emailMessageError =
       'Plase enter $emailLable';

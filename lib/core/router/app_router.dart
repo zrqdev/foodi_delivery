@@ -1,5 +1,6 @@
 import 'package:foodi_delivery/features/auth/presentation/screens/login_screen.dart';
 import 'package:foodi_delivery/features/auth/presentation/screens/sign_up_screen.dart';
+import 'package:foodi_delivery/features/browse/presentation/screens/home_screen.dart';
 import 'package:foodi_delivery/features/onboarding/presentation/screens/onboarding_screen.dart';
 import 'package:go_router/go_router.dart';
 
@@ -7,6 +8,7 @@ class AppRouter {
   static const String kOnboarding = '/';
   static const String kLogin = '/login';
   static const String kSignUp = '/signUp';
+  static const String kHome = '/home';
 
   static final router = GoRouter(
     initialLocation: kOnboarding,
@@ -22,6 +24,11 @@ class AppRouter {
       GoRoute(
         path: kSignUp,
         builder: (context, state) => SignUpScreen(),
+      ),
+
+      GoRoute(
+        path: kHome,
+        builder: (context, state) => HomeScreen(),
       ),
     ],
   );

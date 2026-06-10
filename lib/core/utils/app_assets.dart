@@ -24,4 +24,12 @@ class Assets {
 
   static const String google =
       "assets/images/googleIcon.svg";
+
+  // Svg Icons
+  static const String menuIcon = "assets/icons/menu.svg";
+  static const String shopingCartIcon =
+      "assets/icons/shopping-cart.svg";
+  static const String searchIcon =
+      "assets/icons/search.svg";
+  static const String filterIcon = "assets/icons/Icon.svg";
 }

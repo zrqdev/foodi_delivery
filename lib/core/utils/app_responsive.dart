@@ -33,5 +33,11 @@ class AppResponsive {
   double get widthOnboardingButton => setHeight(321);
 
   double get heightAuthButton => setHeight(60);
-  double get widthAuthButton => setHeight(248);
+  double get widthAuthButton => setWidth(248);
+
+  double get widthFilterButton => setWidth(60);
+  double get heightFilterButton => setHeight(60);
+
+  double get widthItem => setWidth(183);
+  double get heighItem => setHeight(212);
 }
