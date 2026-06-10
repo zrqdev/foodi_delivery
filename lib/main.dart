@@ -1,9 +1,15 @@
+import 'package:device_preview/device_preview.dart';
 import 'package:foodi_delivery/core/router/app_router.dart';
 import 'package:foodi_delivery/core/utils/app_colors.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const FoodiDelivery());
+  runApp(
+    DevicePreview(
+      enabled: false,
+      builder: (context) => const FoodiDelivery(),
+    ),
+  );
 }
 
 class FoodiDelivery extends StatelessWidget {

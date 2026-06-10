@@ -31,5 +31,7 @@ class Assets {
       "assets/icons/shopping-cart.svg";
   static const String searchIcon =
       "assets/icons/search.svg";
-  static const String filterIcon = "assets/icons/Icon.svg";
+  static const String filterIcon =
+      "assets/icons/filter.svg";
+  static const String arrowIcon = "assets/icons/arrow.svg";
 }
