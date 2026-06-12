@@ -30,9 +30,9 @@ class CustomButton extends StatelessWidget {
         ),
         onPressed: onPressed,
         color: AppColors.whiteColor,
-        height: appResponsive.heightOnboardingButton,
+        height: appResponsive.onboardingButtonHeight,
 
-        minWidth: appResponsive.widthOnboardingButton,
+        minWidth: appResponsive.onboardingButtonWidth,
         child: Text(
           AppStrings.getStarted,
           style: AppTextStyle.style700size16(context),

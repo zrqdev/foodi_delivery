@@ -40,4 +40,9 @@ class AppStrings {
       'Plase enter $confirmePassword';
   static final String emailValidMessageError =
       'Plase enter valid $emailLable';
+
+  // Order Item Details Screen
+  static final String addToCart = 'Add to cart';
+  static final String titleDescription = 'Description';
+  static final String titleDeliveryInfo = 'Delivery info';
 }

@@ -15,7 +15,7 @@ class CustomSearchBar extends StatelessWidget {
       children: [
         Expanded(
           child: Container(
-            margin: EdgeInsets.only(right: 12),
+            margin: EdgeInsets.only(right: 12, left: 16),
             padding: EdgeInsets.symmetric(
               vertical: 18,
               horizontal: 28,
@@ -46,6 +46,7 @@ class CustomSearchBar extends StatelessWidget {
         ),
 
         Container(
+          margin: EdgeInsets.only(right: 16),
           padding: EdgeInsets.symmetric(
             vertical: 18,
             horizontal: 18,

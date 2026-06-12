@@ -21,8 +21,8 @@ class CustomButton extends StatelessWidget {
 
     return MaterialButton(
       elevation: 4,
-      height: appResponsive.heightAuthButton,
-      minWidth: appResponsive.widthAuthButton,
+      height: appResponsive.authButtonHeight,
+      minWidth: appResponsive.authButtonWidth,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadiusGeometry.circular(28),
       ),

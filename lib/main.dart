@@ -19,8 +19,12 @@ class FoodiDelivery extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp.router(
       debugShowCheckedModeBanner: false,
+
       theme: ThemeData(
         scaffoldBackgroundColor: AppColors.whiteColor,
+        appBarTheme: AppBarTheme(
+          backgroundColor: Colors.transparent,
+        ),
       ),
       routerConfig: AppRouter.router,
     );

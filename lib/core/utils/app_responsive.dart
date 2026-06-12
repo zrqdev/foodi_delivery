@@ -7,9 +7,9 @@ class AppResponsive {
 
   AppResponsive({required this.context});
 
-  double get _widthDevice =>
+  double get _deviceWidth =>
       MediaQuery.sizeOf(context).width;
-  double get _heightDevice =>
+  double get _deviceHeight =>
       MediaQuery.sizeOf(context).height;
 
   double get bottomPadding =>
@@ -19,25 +19,30 @@ class AppResponsive {
       MediaQuery.of(context).padding.top;
 
   double setFontSize(double size) {
-    double scaleFactor = _widthDevice / baseWidth;
+    double scaleFactor = _deviceWidth / baseWidth;
 
     return size * scaleFactor;
   }
 
   double setHeight(double height) =>
-      _heightDevice * (height / baseHeight);
+      _deviceHeight * (height / baseHeight);
   double setWidth(double width) =>
-      _widthDevice * (width / baseWidth);
+      _deviceWidth * (width / baseWidth);
 
-  double get heightOnboardingButton => setHeight(70);
-  double get widthOnboardingButton => setHeight(321);
+  double get onboardingButtonHeight => setHeight(70);
+  double get onboardingButtonWidth => setWidth(321);
 
-  double get heightAuthButton => setHeight(60);
-  double get widthAuthButton => setWidth(248);
+  double get authButtonHeight => setHeight(60);
+  double get authButtonWidth => setWidth(248);
 
-  double get widthFilterButton => setWidth(60);
-  double get heightFilterButton => setHeight(60);
+  double get filterButtonWidth => setWidth(60);
+  double get filterButtonHeight => setHeight(60);
 
-  double get widthItem => setWidth(183);
-  double get heighItem => setHeight(212);
+  double get whiteCardWidth => setWidth(183);
+  double get whiteCardHeight => setHeight(212);
+
+  double get orderItemHeight => setHeight(296);
+
+  double get dynamicAspectRatio =>
+      whiteCardWidth / orderItemHeight;
 }

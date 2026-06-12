@@ -10,17 +10,27 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.transparent,
+        forceMaterialTransparency: true,
         // Menu Button
-        leading: IconButton(
-          onPressed: () {},
-          icon: SvgPicture.asset(Assets.menuIcon),
+        leading: Padding(
+          padding: const EdgeInsets.only(left: 16),
+          child: IconButton(
+            onPressed: () {},
+            icon: SvgPicture.asset(Assets.menuIcon),
+          ),
         ),
         // Shoping cart Button
         actions: [
-          IconButton(
-            onPressed: () {},
-            icon: SvgPicture.asset(Assets.shopingCartIcon),
+          Padding(
+            padding: const EdgeInsets.symmetric(
+              horizontal: 16,
+            ),
+            child: IconButton(
+              onPressed: () {},
+              icon: SvgPicture.asset(
+                Assets.shopingCartIcon,
+              ),
+            ),
           ),
         ],
       ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:foodi_delivery/core/widgets/custom_icon_button.dart';
 import 'package:go_router/go_router.dart';
 
 import '../widgets/sign_up_screen_body.dart';
@@ -12,15 +13,11 @@ class SignUpScreen extends StatelessWidget {
       // resizeToAvoidBottomInset: false,
       appBar: AppBar(
         forceMaterialTransparency: true,
-        backgroundColor: Colors.transparent,
-        leading: IconButton(
+        leading: CustomIconButton(
           onPressed: () {
             context.pop();
           },
-          icon: Icon(
-            Icons.arrow_back_ios_new_rounded,
-            size: 20,
-          ),
+          icon: Icons.arrow_back_ios_new_rounded,
         ),
       ),
 
