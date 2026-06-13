@@ -2,6 +2,8 @@ import 'package:device_preview/device_preview.dart';
 import 'package:foodi_delivery/core/router/app_router.dart';
 import 'package:foodi_delivery/core/utils/app_colors.dart';
 import 'package:flutter/material.dart';
+import 'package:foodi_delivery/features/browse/logic/nav_items.dart';
+import 'package:provider/provider.dart';
 
 void main() {
   runApp(
@@ -17,16 +19,19 @@ class FoodiDelivery extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp.router(
-      debugShowCheckedModeBanner: false,
+    return ChangeNotifierProvider(
+      create: (context) => NavItems(),
+      child: MaterialApp.router(
+        debugShowCheckedModeBanner: false,
 
-      theme: ThemeData(
-        scaffoldBackgroundColor: AppColors.whiteColor,
-        appBarTheme: AppBarTheme(
-          backgroundColor: Colors.transparent,
+        theme: ThemeData(
+          scaffoldBackgroundColor: AppColors.whiteColor,
+          appBarTheme: AppBarTheme(
+            backgroundColor: Colors.transparent,
+          ),
         ),
+        routerConfig: AppRouter.router,
       ),
-      routerConfig: AppRouter.router,
     );
   }
 }

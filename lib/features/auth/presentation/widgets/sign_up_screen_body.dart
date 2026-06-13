@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:foodi_delivery/core/utils/app_strings.dart';
-import 'package:foodi_delivery/features/auth/presentation/widgets/custom_button.dart';
+import 'package:foodi_delivery/core/widgets/custom_button.dart';
 import 'package:foodi_delivery/features/auth/presentation/widgets/sign_in_with.dart';
 import 'package:gap/gap.dart';
 import '../../../../core/utils/app_text_style.dart';
@@ -72,7 +72,7 @@ class SignUpScreenBody extends StatelessWidget {
               Gap(36),
               CustomButton(
                 name: AppStrings.signUpTitle,
-                onPressed: () {
+                onTap: () {
                   if (_formKey.currentState!.validate()) {
                     print('valid data');
                   } else {

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:foodi_delivery/core/utils/app_assets.dart';
+import '../widgets/bottom_nav_bar.dart';
 import '../widgets/home_screen_body.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -36,6 +37,8 @@ class HomeScreen extends StatelessWidget {
       ),
 
       body: HomeScreenBody(),
+
+      bottomNavigationBar: BottomNavBar(),
     );
   }
 }

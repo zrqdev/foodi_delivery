@@ -9,7 +9,7 @@ import 'package:foodi_delivery/features/auth/presentation/widgets/sign_in_with.d
 import 'package:gap/gap.dart';
 import 'package:go_router/go_router.dart';
 
-import 'custom_button.dart';
+import '../../../../core/widgets/custom_button.dart';
 
 class LoginScreenBody extends StatelessWidget {
   LoginScreenBody({super.key});
@@ -65,7 +65,7 @@ class LoginScreenBody extends StatelessWidget {
               // Login Button
               CustomButton(
                 name: AppStrings.login,
-                onPressed: () {
+                onTap: () {
                   if (_formKey.currentState!.validate()) {
                     // ignore: avoid_print
                     print('valid data');

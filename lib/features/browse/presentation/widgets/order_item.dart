@@ -105,6 +105,15 @@ class OrderItem extends StatelessWidget {
                       Rating(
                         numberRating: rating,
                         appResponsive: appResponsive,
+                        textStyle:
+                            AppTextStyle.style700size16(
+                              context,
+                            ).copyWith(
+                              fontSize: appResponsive
+                                  .setFontSize(10),
+                              color: AppColors.blackColor,
+                            ),
+                        sizeIcon: 10,
                       ),
                     ],
                   ),

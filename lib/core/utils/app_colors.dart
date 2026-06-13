@@ -16,6 +16,9 @@ class AppColors {
     0xffEEEEEE,
   );
   static final Color silverColor = const Color(0xffC4C4C4);
+  static final Color silverChaliceColor = const Color(
+    0xffADADAF,
+  );
   static final Color darkGrayColor = const Color(
     0xff5B5B5E,
   );

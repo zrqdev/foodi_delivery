@@ -45,4 +45,6 @@ class AppResponsive {
 
   double get dynamicAspectRatio =>
       whiteCardWidth / orderItemHeight;
+
+  double get removeBottomPadding => bottomPadding;
 }

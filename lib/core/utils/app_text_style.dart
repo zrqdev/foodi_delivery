@@ -55,4 +55,14 @@ class AppTextStyle {
       color: AppColors.silverColor,
     );
   }
+
+  static TextStyle style400size24(BuildContext context) {
+    final responsive = AppResponsive(context: context);
+    return TextStyle(
+      fontFamily: 'Supreme',
+      fontWeight: FontWeight.w400,
+      fontSize: responsive.setFontSize(24),
+      color: AppColors.blackColor,
+    );
+  }
 }
