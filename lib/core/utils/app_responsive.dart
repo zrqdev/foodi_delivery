@@ -12,8 +12,11 @@ class AppResponsive {
   double get _deviceHeight =>
       MediaQuery.sizeOf(context).height;
 
-  double get bottomPadding =>
+  double get _bottomPadding =>
       MediaQuery.of(context).padding.bottom;
+
+  double get _topPadding =>
+      MediaQuery.of(context).padding.top;
 
   double get topPadding =>
       MediaQuery.of(context).padding.top;
@@ -43,8 +46,11 @@ class AppResponsive {
 
   double get orderItemHeight => setHeight(296);
 
+  double get favoritOrderHeight => setHeight(118);
+
   double get dynamicAspectRatio =>
       whiteCardWidth / orderItemHeight;
 
-  double get removeBottomPadding => bottomPadding;
+  double get removeBottomPadding => _bottomPadding;
+  double get removeTopPadding => _topPadding;
 }

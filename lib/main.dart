@@ -2,7 +2,7 @@ import 'package:device_preview/device_preview.dart';
 import 'package:foodi_delivery/core/router/app_router.dart';
 import 'package:foodi_delivery/core/utils/app_colors.dart';
 import 'package:flutter/material.dart';
-import 'package:foodi_delivery/features/browse/logic/nav_items.dart';
+import 'package:foodi_delivery/core/logic/nav_items_provider.dart';
 import 'package:provider/provider.dart';
 
 void main() {
@@ -20,7 +20,7 @@ class FoodiDelivery extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
-      create: (context) => NavItems(),
+      create: (context) => NavItemsProvider(),
       child: MaterialApp.router(
         debugShowCheckedModeBanner: false,
 

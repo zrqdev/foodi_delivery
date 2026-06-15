@@ -45,4 +45,7 @@ class AppStrings {
   static final String addToCart = 'Add to cart';
   static final String titleDescription = 'Description';
   static final String titleDeliveryInfo = 'Delivery info';
+
+  static final String titleFavoritesScreen =
+      'Order Details';
 }

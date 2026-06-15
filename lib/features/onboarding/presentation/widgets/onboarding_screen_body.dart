@@ -19,7 +19,7 @@ class OnboardingScreenBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.only(
-        bottom: appResponsive.bottomPadding,
+        bottom: appResponsive.removeBottomPadding,
       ),
       child: Padding(
         padding: EdgeInsets.only(

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:foodi_delivery/features/browse/presentation/widgets/custom_image_view.dart';
+import 'package:foodi_delivery/core/widgets/custom_image_view.dart';
 import 'package:gap/gap.dart';
 import '../../../../core/utils/app_assets.dart';
 import '../../../../core/utils/app_colors.dart';
@@ -83,9 +83,11 @@ class OrderItem extends StatelessWidget {
                 children: [
                   // image order
                   CustomImageView(
-                    appResponsive: appResponsive,
-                    imageOrder: imageOrder,
+                    image: imageOrder,
+                    heightImage: 124,
+                    widthImage: 124,
                   ),
+                  //--------------------------
                   Gap(appResponsive.setHeight(16)),
                   // Title and rating order
                   Row(

@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:foodi_delivery/core/utils/app_colors.dart';
 import 'package:foodi_delivery/core/utils/app_strings.dart';
 import 'package:foodi_delivery/core/utils/app_text_style.dart';
+import 'package:foodi_delivery/features/browse/presentation/widgets/custom_app_bar.dart';
 import 'package:foodi_delivery/features/browse/presentation/widgets/order_items_grid.dart';
 import 'package:gap/gap.dart';
 
+import '../../../../core/utils/app_assets.dart';
 import 'custom_search_bar.dart';
 
 class HomeScreenBody extends StatelessWidget {
@@ -15,6 +18,18 @@ class HomeScreenBody extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
+        CustomAppBar(
+          leadingIcon: SvgPicture.asset(Assets.menuIcon),
+          leadingOnPressed: () {
+            print('Leading icon home screen');
+          },
+          actionIcon: SvgPicture.asset(
+            Assets.shopingCartIcon,
+          ),
+          actionOnPressed: () {
+            print('Action icon home screen');
+          },
+        ),
         Padding(
           padding: EdgeInsets.symmetric(horizontal: 16),
           child: Text(

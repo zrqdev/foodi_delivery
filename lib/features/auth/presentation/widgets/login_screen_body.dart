@@ -69,7 +69,7 @@ class LoginScreenBody extends StatelessWidget {
                   if (_formKey.currentState!.validate()) {
                     // ignore: avoid_print
                     print('valid data');
-                    context.go(AppRouter.kHome);
+                    context.go(AppRouter.kAppShell);
                   }
                 },
               ),

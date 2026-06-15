@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:foodi_delivery/core/utils/app_colors.dart';
 import 'package:foodi_delivery/core/utils/app_responsive.dart';
 import 'package:foodi_delivery/core/utils/app_strings.dart';
 import 'package:foodi_delivery/core/widgets/custom_button.dart';
+import 'package:foodi_delivery/core/widgets/custom_image_view.dart';
+import 'package:foodi_delivery/features/browse/presentation/widgets/custom_app_bar.dart';
 import 'package:foodi_delivery/features/browse/presentation/widgets/price_and_quantity_selector.dart';
 import 'package:gap/gap.dart';
+import 'package:go_router/go_router.dart';
 import 'text_block.dart';
 import 'title_rating_bar.dart';
 
@@ -19,38 +21,29 @@ class OrderDetailsBody extends StatelessWidget {
 
     return Column(
       children: [
-        Align(
-          alignment: Alignment.center,
-          child: Stack(
-            alignment: Alignment.center,
-            children: [
-              Positioned(
-                bottom: 0,
-
-                child: Container(
-                  height: appResponsive.setWidth(30),
-                  width: appResponsive.setWidth(80),
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(30),
-                    shape: BoxShape.rectangle,
-                    boxShadow: [
-                      BoxShadow(
-                        color: AppColors.blackColor,
-                        blurRadius: 60,
-                      ),
-                    ],
-                    // color: AppColors.blackColor,
-                  ),
-                ),
-              ),
-              Image.asset(
-                'assets/images/image 4.png',
-                height: appResponsive.setHeight(250),
-                width: appResponsive.setWidth(250),
-              ),
-            ],
+        // ----- App Bar -----
+        CustomAppBar(
+          leadingIcon: Icon(
+            Icons.arrow_back_ios_new_rounded,
           ),
+          leadingOnPressed: () {
+            print('back to icon order details screen');
+
+            context.pop();
+          },
+          actionIcon: Icon(Icons.favorite_outline_rounded),
+          actionOnPressed: () {
+            print('Favorite icon order details screen');
+          },
         ),
+
+        // ----- Image Order View -----
+        CustomImageView(
+          image: 'assets/images/image 4.png',
+          heightImage: 250,
+          widthImage: 250,
+        ),
+
         PriceAndQuantitySelector(
           appResponsive: appResponsive,
         ),
