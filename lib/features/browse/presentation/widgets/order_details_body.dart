@@ -42,11 +42,11 @@ class OrderDetailsBody extends StatelessWidget {
           image: 'assets/images/image 4.png',
           heightImage: 250,
           widthImage: 250,
+          heightShadow: 20,
+          widthShadow: 60,
         ),
 
-        PriceAndQuantitySelector(
-          appResponsive: appResponsive,
-        ),
+        PriceAndQuantitySelector(),
         TitleRatingBar(appResponsive: appResponsive),
 
         TextBlock(
@@ -62,11 +62,14 @@ class OrderDetailsBody extends StatelessWidget {
         ),
 
         Spacer(),
-        CustomButton(
-          name: AppStrings.addToCart,
-          onTap: () {
-            print('Add to cart');
-          },
+        Padding(
+          padding: EdgeInsets.symmetric(horizontal: 60),
+          child: CustomButton(
+            name: AppStrings.addToCart,
+            onTap: () {
+              print('Add to cart');
+            },
+          ),
         ),
         Gap(appResponsive.removeBottomPadding + 16),
       ],

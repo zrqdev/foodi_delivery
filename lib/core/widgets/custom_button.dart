@@ -24,18 +24,22 @@ class CustomButton extends StatelessWidget {
       child: Container(
         alignment: Alignment.center,
         height: appResponsive.authButtonHeight,
-        width: appResponsive.authButtonWidth,
 
         decoration: BoxDecoration(
           color: AppColors.primaryColor,
-
           borderRadius: BorderRadius.circular(30),
         ),
-        child: Text(
-          name,
-          style: AppTextStyle.style700size16(
-            context,
-          ).copyWith(color: AppColors.whiteColor),
+        child: Padding(
+          padding: EdgeInsets.symmetric(
+            vertical: 12,
+            horizontal: 28,
+          ),
+          child: Text(
+            name,
+            style: AppTextStyle.style700size16(
+              context,
+            ).copyWith(color: AppColors.whiteColor),
+          ),
         ),
       ),
     );

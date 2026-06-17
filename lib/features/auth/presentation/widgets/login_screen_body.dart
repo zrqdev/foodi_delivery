@@ -63,15 +63,20 @@ class LoginScreenBody extends StatelessWidget {
               ),
               Gap(30),
               // Login Button
-              CustomButton(
-                name: AppStrings.login,
-                onTap: () {
-                  if (_formKey.currentState!.validate()) {
-                    // ignore: avoid_print
-                    print('valid data');
-                    context.go(AppRouter.kAppShell);
-                  }
-                },
+              Padding(
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 60,
+                ),
+                child: CustomButton(
+                  name: AppStrings.login,
+                  onTap: () {
+                    if (_formKey.currentState!.validate()) {
+                      // ignore: avoid_print
+                      print('valid data');
+                      context.go(AppRouter.kAppShell);
+                    }
+                  },
+                ),
               ),
 
               Gap(30),

@@ -8,11 +8,15 @@ class CustomImageView extends StatelessWidget {
     required this.image,
     required this.heightImage,
     required this.widthImage,
+    required this.heightShadow,
+    required this.widthShadow,
   });
 
   final String image;
   final double heightImage;
   final double widthImage;
+  final double heightShadow;
+  final double widthShadow;
 
   @override
   Widget build(BuildContext context) {
@@ -27,8 +31,8 @@ class CustomImageView extends StatelessWidget {
           Positioned(
             bottom: 0,
             child: Container(
-              height: appResponsive.setWidth(30),
-              width: appResponsive.setWidth(80),
+              height: appResponsive.setWidth(heightShadow),
+              width: appResponsive.setWidth(widthShadow),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(30),
                 shape: BoxShape.rectangle,

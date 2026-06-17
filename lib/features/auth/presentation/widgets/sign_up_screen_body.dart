@@ -70,15 +70,20 @@ class SignUpScreenBody extends StatelessWidget {
                     AppStrings.confirmePasswordMessageError,
               ),
               Gap(36),
-              CustomButton(
-                name: AppStrings.signUpTitle,
-                onTap: () {
-                  if (_formKey.currentState!.validate()) {
-                    print('valid data');
-                  } else {
-                    print('valid djkdnwnkj  data');
-                  }
-                },
+              Padding(
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 60,
+                ),
+                child: CustomButton(
+                  name: AppStrings.signUpTitle,
+                  onTap: () {
+                    if (_formKey.currentState!.validate()) {
+                      print('valid data');
+                    } else {
+                      print('valid djkdnwnkj  data');
+                    }
+                  },
+                ),
               ),
               Gap(36),
               SignInWith(),

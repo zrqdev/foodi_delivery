@@ -1,17 +1,11 @@
 import 'package:flutter/material.dart';
 
 import '../../../../core/utils/app_colors.dart';
-import '../../../../core/utils/app_responsive.dart';
 import '../../../../core/utils/app_text_style.dart';
 import 'quantity_selector.dart';
 
 class PriceAndQuantitySelector extends StatelessWidget {
-  const PriceAndQuantitySelector({
-    super.key,
-    required this.appResponsive,
-  });
-
-  final AppResponsive appResponsive;
+  const PriceAndQuantitySelector({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +21,7 @@ class PriceAndQuantitySelector extends StatelessWidget {
             ).copyWith(color: AppColors.primaryColor),
           ),
 
-          QuantitySelector(appResponsive: appResponsive),
+          QuantitySelector(),
         ],
       ),
     );

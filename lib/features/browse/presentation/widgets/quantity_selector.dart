@@ -6,15 +6,16 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:foodi_delivery/core/utils/app_text_style.dart';
 
 class QuantitySelector extends StatelessWidget {
-  const QuantitySelector({
-    super.key,
-    required this.appResponsive,
-  });
-  final AppResponsive appResponsive;
+  const QuantitySelector({super.key});
+
   @override
   Widget build(BuildContext context) {
+    AppResponsive appResponsive = AppResponsive(
+      context: context,
+    );
     return Row(
       children: [
+        // Decrement button
         GestureDetector(
           onTap: () {
             print('remove ');
@@ -27,17 +28,22 @@ class QuantitySelector extends StatelessWidget {
                 width: 2,
                 strokeAlign: BorderSide.strokeAlignInside,
               ),
+
               shape: BoxShape.circle,
             ),
-            child: Padding(
-              padding: const EdgeInsets.all(4),
-              child: Icon(
-                Icons.remove_rounded,
-                color: AppColors.primaryColor,
-              ),
-            ),
+            child:
+                // Padding(
+                //   padding: const EdgeInsets.all(4),
+                //   child:
+                Icon(
+                  Icons.remove_rounded,
+                  color: AppColors.primaryColor,
+                  size: 28,
+                  // ),
+                ),
           ),
         ),
+        // Text counte number
         Padding(
           padding: EdgeInsets.symmetric(horizontal: 10),
           child: Text(
@@ -48,6 +54,7 @@ class QuantitySelector extends StatelessWidget {
                 ),
           ),
         ),
+        // increment button
         GestureDetector(
           onTap: () {
             print('plus Order');
@@ -74,8 +81,8 @@ class QuantitySelector extends StatelessWidget {
             child: Padding(
               padding: const EdgeInsets.all(8),
               child: SvgPicture.asset(
-                Assets.plusIcon,
-                height: appResponsive.setHeight(20),
+                Assets.incrementIcon,
+                height: appResponsive.setHeight(16),
               ),
             ),
           ),

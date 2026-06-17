@@ -86,6 +86,8 @@ class OrderItem extends StatelessWidget {
                     image: imageOrder,
                     heightImage: 124,
                     widthImage: 124,
+                    heightShadow: 20,
+                    widthShadow: 50,
                   ),
                   //--------------------------
                   Gap(appResponsive.setHeight(16)),

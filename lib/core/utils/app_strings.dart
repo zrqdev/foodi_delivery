@@ -46,6 +46,16 @@ class AppStrings {
   static final String titleDescription = 'Description';
   static final String titleDeliveryInfo = 'Delivery info';
 
+  // Titles
   static final String titleFavoritesScreen =
       'Order Details';
+  static final String titleCheckoutScreen = 'Checkout';
+
+  // Checkout screen
+  static final String subtotal = 'Subtotal';
+  static final String promoCode = 'Promo Code';
+  static final String delivery = 'Delivery';
+  static final String total = 'Total';
+  static final String apply = 'Apply';
+  static final String items = 'items';
 }

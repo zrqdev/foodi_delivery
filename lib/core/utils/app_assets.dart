@@ -34,5 +34,8 @@ class Assets {
   static const String filterIcon =
       "assets/icons/filter.svg";
   static const String arrowIcon = "assets/icons/arrow.svg";
-  static const String plusIcon = "assets/icons/plus.svg";
+  static const String incrementIcon =
+      "assets/icons/incrementIcon.svg";
+  static const String decrementIcon =
+      "assets/icons/decrementIcon.svg";
 }
