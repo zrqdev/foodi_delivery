@@ -50,6 +50,7 @@ class AppStrings {
   static final String titleFavoritesScreen =
       'Order Details';
   static final String titleCheckoutScreen = 'Checkout';
+  static final String titleProfileScreen = 'Profile';
 
   // Checkout screen
   static final String subtotal = 'Subtotal';
@@ -58,4 +59,14 @@ class AppStrings {
   static final String total = 'Total';
   static final String apply = 'Apply';
   static final String items = 'items';
+
+  // Profile screen
+  static final String phoneNumber = 'Phone Number';
+  static final String email = 'Email';
+  static final String address = 'Address';
+  static final String orders = 'Orders';
+  static final String pendingReviews = 'Pending Reviews';
+  static final String help = 'help';
+  static final String signOut = 'Sign Out';
+  static final String edit = 'Edit';
 }

@@ -3,25 +3,17 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 
 class AppColors {
-  static final Color primaryColor = const Color(0xffFA0C2C);
-  static final Color whiteColor = const Color(0xffFFFFFF);
-  static final Color blackColor = const Color(0xff000000);
-  static final Color grayColor = const Color(0xffD0D2D1);
+  static const Color primaryColor = Color(0xffFA0C2C);
+  static const Color whiteColor = Color(0xffFFFFFF);
+  static const Color blackColor = Color(0xff000000);
+  static const Color grayColor = Color(0xffD0D2D1);
 
-  static final Color lightSilverColor = const Color(
-    0xB5D9D9D9,
-  );
+  static const Color lightSilverColor = Color(0xB5D9D9D9);
 
-  static final Color brightGrayColor = const Color(
-    0xffEEEEEE,
-  );
-  static final Color silverColor = const Color(0xffC4C4C4);
-  static final Color silverChaliceColor = const Color(
-    0xffADADAF,
-  );
-  static final Color darkGrayColor = const Color(
-    0xff5B5B5E,
-  );
-  static final Color errorColor = const Color(0xFFFF2C2C);
-  static final Color starColor = const Color(0xFFFFDD1F);
+  static const Color brightGrayColor = Color(0xffEEEEEE);
+  static const Color silverColor = Color(0xffC4C4C4);
+  static const Color silverChaliceColor = Color(0xffADADAF);
+  static const Color darkGrayColor = Color(0xff5B5B5E);
+  static const Color errorColor = Color(0xFFFF2C2C);
+  static const Color starColor = Color(0xFFFFDD1F);
 }

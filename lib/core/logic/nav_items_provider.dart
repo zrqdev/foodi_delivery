@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:foodi_delivery/core/data/models/nav_item_model.dart';
 import 'package:foodi_delivery/features/browse/presentation/screens/home_screen.dart';
+import 'package:foodi_delivery/features/profile/presentation/screens/profile_screen.dart';
 import 'package:foodi_delivery/features/wishlist/presentation/screens/wishlist_screen.dart';
 
 class NavItemsProvider with ChangeNotifier {
@@ -40,7 +41,7 @@ class NavItemsProvider with ChangeNotifier {
       id: 4,
       enabledIcon: Icons.person_2_rounded,
       disabledIcon: Icons.person_2_outlined,
-      destination: HomeScreen(),
+      destination: ProfileScreen(),
     ),
   ];
 }
